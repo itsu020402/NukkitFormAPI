@@ -1,7 +1,0 @@
-name: NukkitFormAPI
-main: itsu.mcbe.form.core.NukkitFormAPICore
-author: Itsu
-api: ["1.0.0"]
-version: 2.0.1
-load: POSTWORLD
-description: NukkitFormAPI provider plugin

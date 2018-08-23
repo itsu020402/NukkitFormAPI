@@ -30,10 +30,16 @@ public class NukkitFormEventListener implements Listener {
 
         if(form instanceof SimpleForm) {
             SimpleForm simpleForm = (SimpleForm) form;
-            int buttonIndex = Integer.parseInt(packet.data.replaceAll("[^0-9]", ""));
-            
-            simpleForm.onEnter(player, buttonIndex);
-            simpleForm.getButtons().get(buttonIndex).onClick(player);
+
+            if (packet.data == null || packet.data.equals("null")) {
+                simpleForm.onEnter(player, -1);
+                
+            } else {
+                int buttonIndex = Integer.parseInt(packet.data.replaceAll("[^0-9]", ""));
+
+                simpleForm.onEnter(player, buttonIndex);
+                simpleForm.getButtons().get(buttonIndex).onClick(player);
+            }
             
         } else if(form instanceof ModalForm) {
         	ModalForm modalForm = (ModalForm) form;
