@@ -10,10 +10,11 @@
 
     <repositories>
         <repository>
-            <id>regularbox</id>
-            <url>http://ci.regularbox.com/plugin/repository/everything/</url>
+            <id>mengcraft</id>
+            <url>http://ci.mengcraft.com:8080/plugin/repository/everything/</url>
         </repository>
     </repositories>
+
 
     <properties>
         <maven.compiler.target>1.9</maven.compiler.target>
