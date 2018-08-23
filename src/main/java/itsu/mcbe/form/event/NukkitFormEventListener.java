@@ -77,6 +77,8 @@ public class NukkitFormEventListener implements Listener {
             
             customForm.onEnter(result);
         }
+
+        DataCenter.removeForm(formId);
     }
 
 }
