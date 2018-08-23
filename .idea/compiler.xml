@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="NukkitFormAPI" />
+        <module name="NukkitFormAPI (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

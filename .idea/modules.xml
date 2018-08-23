@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NukkitFormAPI.iml" filepath="$PROJECT_DIR$/NukkitFormAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NukkitFormAPI (1).iml" filepath="$PROJECT_DIR$/NukkitFormAPI (1).iml" />
     </modules>
   </component>
 </project>
