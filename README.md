@@ -40,7 +40,7 @@ APIをスレッドセーフに取得することができます。
 
     Button button1 = new Button() {
         @Override
-        public void onClick() {
+        public void onClick(Player player) {
             //ボタンクリック時の処理
         }
     }
@@ -49,7 +49,7 @@ APIをスレッドセーフに取得することができます。
         
     SimpleForm form = new SimpleForm() {
         @Override
-        public void onEnter(int index) {
+        public void onEnter(Player player, int index) {
             //こっちはフォームにリスナを設置した場合。indexは押されたボタンのインデックスです。
         }
     }
@@ -66,12 +66,12 @@ Buttonクラスの__onClick__メソッドをオーバーライドすることで
 
     ModalForm form = new ModalForm() {
         @Override
-        public void onButton1Click() {
+        public void onButton1Click(Player player) {
             //上のボタンをクリックしたときの処理
         }
         
         @Override
-        public void onButton2Click() {
+        public void onButton2Click(Player player) {
             //下のボタンをクリックしたときの処理
         }
     }
@@ -84,7 +84,7 @@ ModalFormクラスのonButton1Click()で上のボタン、onButton2Click()をオ
 ### CustomForm（カスタムの要素を持ったフォームの作成）
     CustomForm form = new CustomForm() {
         @Override
-        public void onEnter(List<Object> response) {
+        public void onEnter(Player player, List<Object> response) {
             //ここに「送信」ボタンを押したときの処理を書く。responseはそのフォームのレスポンスで、上にある要素から順にリストで返ってきます。
         }
     }
