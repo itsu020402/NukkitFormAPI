@@ -3,6 +3,7 @@ package itsu.mcbe.form.base;
 import java.util.HashMap;
 import java.util.Map;
 
+import cn.nukkit.Player;
 import com.google.gson.Gson;
 
 /**
@@ -18,8 +19,8 @@ import com.google.gson.Gson;
  * 
  * @see ModalForm#setButton1Text(String)
  * @see ModalForm#setButton2Text(String)
- * @see ModalForm#onButton1Click()
- * @see ModalForm#onButton2Click()
+ * @see ModalForm#onButton1Click(Player player)
+ * @see ModalForm#onButton2Click(Player player)
  * 
  * @author itsu
  *
@@ -399,14 +400,14 @@ public class ModalForm implements Form {
      * <small>For Nukkit / NukkitX / Jupiter</small>
      * <br>
      * <br>
-     * <h1>ModalForm - onButton1Click()</h1>
+     * <h1>ModalForm - onButton1Click(Player player)</h1>
      * <p>このフォームの上のボタンをクリックした際に呼び出されます。このメソッドはプラグイン側でオーバーライドする必要があります。
      * <br>
      * 
      * @author itsu
      *
      */
-    public void onButton1Click() {
+    public void onButton1Click(Player player) {
 
     }
 
@@ -415,14 +416,14 @@ public class ModalForm implements Form {
      * <small>For Nukkit / NukkitX / Jupiter</small>
      * <br>
      * <br>
-     * <h1>ModalForm - onButton1Click()</h1>
+     * <h1>ModalForm - onButton1Click(Player player)</h1>
      * <p>このフォームの下のボタンをクリックした際に呼び出されます。このメソッドはプラグイン側でオーバーライドする必要があります。
      * <br>
      * 
      * @author itsu
      *
      */
-    public void onButton2Click() {
+    public void onButton2Click(Player player) {
 
     }
 

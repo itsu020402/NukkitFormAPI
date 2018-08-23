@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.nukkit.Player;
 import com.google.gson.Gson;
 
 import itsu.mcbe.form.element.Button;
@@ -23,9 +24,9 @@ import itsu.mcbe.form.element.FormElement;
  * 
  * @see SimpleForm#setId(int)
  * @see SimpleForm#setTitle(String)
- * @see SimpleForm#onEnter(int index)
+ * @see SimpleForm#onEnter(Player player, int index)
  * @see Button
- * @see Button#onClick()
+ * @see Button#onClick(Player player)
  * 
  * @author itsu
  *
@@ -285,7 +286,7 @@ public class SimpleForm implements Form {
      * <br>
      * 
      * @see SimpleForm#setButtons(List)
-     * @see SimpleForm#addButton(FormElement)
+     * @see SimpleForm#addButton(Button)
      * 
      * @author itsu
      *
@@ -305,7 +306,7 @@ public class SimpleForm implements Form {
      * <br>
      * 
      * @see SimpleForm#setButtons(List)
-     * @see SimpleForm#addButton(FormElement)
+     * @see SimpleForm#addButton(Button)
      * 
      * @author itsu
      *
@@ -457,14 +458,14 @@ public class SimpleForm implements Form {
      * <small>For Nukkit / NukkitX / Jupiter</small>
      * <br>
      * <br>
-     * <h1>SimpleForm - onEnter(int index)</h1>
+     * <h1>SimpleForm - onEnter(Player player, int index)</h1>
      * <p>このフォームのボタンをクリックした際に呼び出されます。indexはボタンのインデックスで、一番上から0, 1...なっていきます。とこのメソッドはプラグイン側でオーバーライドする必要があります。
      * <br>
      * 
      * @author itsu
      *
      */
-    public void onEnter(int index) {
+    public void onEnter(Player player, int index) {
 
     }
 

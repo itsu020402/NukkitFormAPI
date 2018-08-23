@@ -3,6 +3,7 @@ package itsu.mcbe.form.event;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.nukkit.Player;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.server.DataPacketReceiveEvent;
@@ -23,6 +24,7 @@ public class NukkitFormEventListener implements Listener {
         ModalFormResponsePacket packet = (ModalFormResponsePacket) e.getPacket();
         int formId = packet.formId;
         Form form = DataCenter.getFormById(formId);
+        Player player = e.getPlayer();
         
         if(packet.data == null || packet.data.equals("") || packet.data.equals("null")) return;
 
@@ -30,17 +32,17 @@ public class NukkitFormEventListener implements Listener {
             SimpleForm simpleForm = (SimpleForm) form;
             int buttonIndex = Integer.parseInt(packet.data.replaceAll("[^0-9]", ""));
             
-            simpleForm.onEnter(buttonIndex);
-            simpleForm.getButtons().get(buttonIndex).onClick();
+            simpleForm.onEnter(player, buttonIndex);
+            simpleForm.getButtons().get(buttonIndex).onClick(player);
             
         } else if(form instanceof ModalForm) {
         	ModalForm modalForm = (ModalForm) form;
             String result = packet.data;
             
             if(result.contains("true")) {
-            	modalForm.onButton1Click();
+            	modalForm.onButton1Click(player);
             } else {
-            	modalForm.onButton2Click();
+            	modalForm.onButton2Click(player);
             }
             
         } else if(form instanceof CustomForm) {
@@ -75,7 +77,7 @@ public class NukkitFormEventListener implements Listener {
             	count++;
             }
             
-            customForm.onEnter(result);
+            customForm.onEnter(player, result);
         }
 
         DataCenter.removeForm(formId);

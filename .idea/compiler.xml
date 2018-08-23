@@ -11,6 +11,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="NukkitFormAPI" target="1.9" />
+      <module name="NukkitFormAPI (1)" target="1.9" />
+      <module name="NukkitFormAPI (2)" target="1.9" />
     </bytecodeTargetLevel>
   </component>
 </project>

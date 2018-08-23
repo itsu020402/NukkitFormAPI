@@ -10,6 +10,7 @@ import java.util.Map;
 
 import javax.imageio.ImageIO;
 
+import cn.nukkit.Player;
 import cn.nukkit.utils.MainLogger;
 
 public class Button {
@@ -101,7 +102,7 @@ public class Button {
     	return image;
     }
 
-    public void onClick() {
+    public void onClick(Player player) {
     	
     }
 

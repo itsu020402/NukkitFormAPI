@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.nukkit.Player;
 import com.google.gson.Gson;
 
 import itsu.mcbe.form.element.FormElement;
@@ -22,7 +23,7 @@ import itsu.mcbe.form.element.FormElement;
  * @see CustomForm#addFormElement(FormElement)
  * @see CustomForm#setId(int)
  * @see CustomForm#setTitle(String)
- * @see CustomForm#onEnter(List)
+ * @see CustomForm#onEnter(Player, List)
  * 
  * @author itsu
  *
@@ -380,14 +381,14 @@ public class CustomForm implements Form {
      * <small>For Nukkit / NukkitX / Jupiter</small>
      * <br>
      * <br>
-     * <h1>CustomForm - onEnter(List<Object> response)</h1>
+     * <h1>CustomForm - onEnter(Player player, List<Object> response)</h1>
      * <p>このフォームの「送信」ボタンをクリックした際に呼び出されます。このメソッドはプラグイン側でオーバーライドする必要があります。
      * <br>
      * 
      * @author itsu
      *
      */
-	public void onEnter(List<Object> response) {
+	public void onEnter(Player player, List<Object> response) {
 		
 	}
 
