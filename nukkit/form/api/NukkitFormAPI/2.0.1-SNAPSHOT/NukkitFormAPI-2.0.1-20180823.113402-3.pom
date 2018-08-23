@@ -25,7 +25,7 @@
         <git.branchName>mvn-repo</git.branchName>
         <git.repositoryOwner>itsu020402</git.repositoryOwner>
         <git.repositoryName>NukkitFormAPI</git.repositoryName>
-        <git.isMerge>true</git.isMerge>
+        <git.isMerge>false</git.isMerge>
     </properties>
 
     <dependencies>
@@ -84,7 +84,6 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.12</version>
                 <configuration>
-                    <!-- git commit message -->
                     <message>Maven artifacts for ${project.version}</message>
                     <noJekyll>true</noJekyll>
                     <outputDirectory>${project.build.directory}/${git.branchName}</outputDirectory>
@@ -96,7 +95,6 @@
                     <repositoryName>${git.repositoryName}</repositoryName>
                     <repositoryOwner>${git.repositoryOwner}</repositoryOwner>
 
-                    <!-- true：履歴を残す　false：直近バージョンのみ repositoryに残る -->
                     <merge>${git.isMerge}</merge>
 
                 </configuration>
