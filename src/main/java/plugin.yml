@@ -1,20 +1,7 @@
 name: NukkitFormAPI
-main: itsu.mcbe.form.core.NukkitFormAPIRunTest
-author: itsu020402
+main: itsu.mcbe.form.core.NukkitFormAPICore
+author: Itsu
 api: ["1.0.0"]
-version: 1.0.0
+version: 2.0.1
 load: POSTWORLD
-description: NukkitFormAPIRunTest
-
-commands:
-  form:
-    usage: "/form"
-    description: NukkitFormAPIRunTest
-    
-  modalform:
-    usage: "/modalform"
-    description: NukkitFormAPIRunTest
-    
-  customform:
-    usage: "/customform"
-    description: NukkitFormAPIRunTest
+description: NukkitFormAPI provider plugin

@@ -12,15 +12,15 @@ public class DataCenter {
 	protected static void initalize() {
 		forms = new HashMap<>();
 	}
-	
-	protected static void addForm(int id, Form form) {
+
+	public static void addForm(int id, Form form) {
 		forms.put(id, form);
 	}
 
-	protected static Form getFormById(int id) {
+	public static Form getFormById(int id) {
 		return forms.get(id);
 	}
 
-	protected static void removeForm(int id) { forms.remove(id); };
+	public static void removeForm(int id) { forms.remove(id); };
 
 }
