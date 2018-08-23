@@ -1,10 +1,12 @@
 # NukkitFormAPI
+[![Travis](https://travis-ci.org/itsu020402/NukkitFormAPI.svg?branch=master)](https://travis-ci.org/itsu020402/NukkitFormAPI)  
+  
 NukkitやNukkitX、Jupiterなどでフォームを扱うAPIです。
 レスポンス処理にも対応しており、わざわざプラグイン側でイベントリスナを作り、条件分岐によってフォームの処理を変えるなんて時代はもう終わりです。
 このAPIではフォームやボタンに直接クリック時の処理を記述するという方法を採用しています。  
   
 ## ダウンロード
-<a href=""></a>
+<a href=""></a>  
   
 ##APIの使用
 APIの使用には、前提としてNukkitFormAPIをプラグインとして導入する必要があります。  
