@@ -1,0 +1,20 @@
+name: NukkitFormAPI
+main: itsu.mcbe.form.core.NukkitFormAPIRunTest
+author: itsu020402
+api: ["1.0.0"]
+version: 1.0.0
+load: POSTWORLD
+description: NukkitFormAPIRunTest
+
+commands:
+  form:
+    usage: "/form"
+    description: NukkitFormAPIRunTest
+    
+  modalform:
+    usage: "/modalform"
+    description: NukkitFormAPIRunTest
+    
+  customform:
+    usage: "/customform"
+    description: NukkitFormAPIRunTest
