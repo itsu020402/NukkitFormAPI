@@ -7,6 +7,7 @@
     <groupId>nukkit.form.api</groupId>
     <artifactId>NukkitFormAPI</artifactId>
     <version>2.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <repositories>
         <repository>
@@ -20,6 +21,11 @@
         <maven.compiler.target>1.9</maven.compiler.target>
         <maven.compiler.source>1.9</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <github.global.server>github</github.global.server>
+        <git.branchName>mvn-repo</git.branchName>
+        <git.repositoryOwner>itsu020402</git.repositoryOwner>
+        <git.repositoryName>NukkitFormAPI</git.repositoryName>
+        <git.isMerge>true</git.isMerge>
     </properties>
 
     <dependencies>
@@ -53,6 +59,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -62,6 +69,66 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/${git.branchName}</altDeploymentRepository>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <message>Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/${git.branchName}</outputDirectory>
+                    <branch>refs/heads/${git.branchName}</branch>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+
+                    <repositoryName>${git.repositoryName}</repositoryName>
+                    <repositoryOwner>${git.repositoryOwner}</repositoryOwner>
+
+                    <merge>${git.isMerge}</merge>
+
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.source}</target>
+                    <compilerArgs>
+                        <arg>-Xlint</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/${git.branchName}</url>
+        </repository>
+    </distributionManagement>
+
 </project>

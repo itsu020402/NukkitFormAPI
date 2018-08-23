@@ -5,9 +5,30 @@ NukkitやNukkitX、Jupiterなどでフォームを扱うAPIです。
 レスポンス処理にも対応しており、わざわざプラグイン側でイベントリスナを作り、条件分岐によってフォームの処理を変えるなんて時代はもう終わりです。
 このAPIではフォームやボタンに直接クリック時の処理を記述するという方法を採用しています。  
   
-##APIの使用
+## APIの使用
 APIの使用には、前提としてNukkitFormAPIをプラグインとして導入する必要があります。  
 jarをpluginsフォルダに入れてください。  
+  
+## Mavenリポジトリ
+pom.xmlに以下の記述をしてください。
+    
+    ・・・
+    <repository>
+        <id>github</id>
+        <url>https://raw.github.com/itsu020402/NukkitFormAPI/mvn-repo/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+    
+    ・・・
+    <dependency>
+    	<groupId>nukkit.form.api</groupId>
+    	<artifactId>NukkitFormAPI</artifactId>
+    	<version>2.0.1-SNAPSHOT</version>
+    </dependency>
+    
   
 ## APIリファレンス
 ### APIの取得
