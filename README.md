@@ -16,6 +16,10 @@ pom.xmlに以下の記述をしてください。
     <repository>
         <id>github</id>
         <url>https://raw.github.com/itsu020402/NukkitFormAPI/mvn-repo/</url>
+        <snapshots>
+             <enabled>true</enabled>
+             <updatePolicy>always</updatePolicy>
+        </snapshots>
     </repository>
     
     ・・・
