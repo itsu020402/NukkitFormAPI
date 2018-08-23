@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>nukkit.form.api</groupId>
+  <artifactId>NukkitFormAPI</artifactId>
+  <version>2.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20180823.103447</timestamp>
+      <buildNumber>2</buildNumber>
+    </snapshot>
+    <lastUpdated>20180823103447</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>2.0.1-20180823.103447-2</value>
+        <updated>20180823103447</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>2.0.1-20180823.103447-2</value>
+        <updated>20180823103447</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
