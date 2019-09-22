@@ -35,7 +35,7 @@ pom.xmlに以下の記述をしてください。
 APIをスレッドセーフに取得することができます。
 
     //以下をインポート
-    import itsu.mcbe.form.event.NukkitFormAPI;
+    import itsu.mcbe.form.form.NukkitFormAPI;
       
     //onEnable内に記述
     NukkitFormAPI api = NukkitFormAPI.getSingleton();
